@@ -1,0 +1,333 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Big+Shoulders+Display:wght@700&family=Epilogue:wght@500;700&family=Hanken+Grotesk:wght@500;700;800&family=Karla&family=League+Spartan:wght@500;600;700&family=Lexend+Deca&family=Manrope:wght@700&family=Markazi+Text:wght@500&family=Open+Sans:wght@400;700&family=Poppins:wght@600&family=Rubik:wght@400;500&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Big+Shoulders+Display:wght@700&family=Epilogue:wght@500;700&family=Fraunces:wght@700;900&family=Hanken+Grotesk:wght@500;700;800&family=Karla&family=League+Spartan:wght@500;600;700&family=Lexend+Deca&family=Manrope:wght@700&family=Markazi+Text:wght@500&family=Open+Sans:wght@400;700&family=Poppins:wght@600&family=Rubik:wght@400;500&family=Ubuntu:wght@400;500;700&display=swap');
+
+/* colors */
+:root {
+    --softRed: hsl(7, 99%, 70%);
+    --yellow: hsl(51, 100%, 49%);
+    --darkCyan: hsl(167, 40%, 24%);
+    --Blue: hsl(198, 62%, 26%);
+    --darkCyan2: hsl(168, 34%, 41%);
+    --darkBlue: hsl(212, 27%, 19%);
+    --darkGrayBlue: hsl(213, 9%, 39%);
+    --grayBlue: hsl(232, 10%, 55%);
+    --gray: hsl(210, 4%, 67%);
+    --white: hsl(0, 0%, 100%);
+    --footer: hsla(165, 93%, 38%, 0.534);
+}
+
+html {
+    font-size: 18px;
+}
+
+h1 {
+    font-family: 'Fraunces';
+}
+
+p {
+    font-family: 'Barlow';
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.head {
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.mobile-nav,.desktop-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Barlow';
+    font-size: 1rem;
+}
+
+.desktop-nav-links {
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+}
+
+.desktop-nav {
+    display: flex;
+}
+
+.desktop-nav-links li a {
+    text-decoration: none;
+    color: var(--white);
+    display: inline-block;
+    text-align: center;
+    padding: .7rem;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.desktop-nav-links li:nth-child(4) a {
+    background-color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 2rem;
+    color: var(--Blue);
+    transition: all .4s ease;
+}
+
+.desktop-nav-links li:nth-child(4) a:hover {
+    background-color: transparent;
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.mobile-nav-links {
+    position: absolute;
+    top: 5rem;
+    width: calc(100% - 3rem);
+    left: 1rem;
+    right: 2rem;
+    background-color: var(--white);
+    z-index: 1;
+}
+
+.mobile-nav-links::before {
+    content: '';
+    border-width: 35px;
+    border-color: transparent transparent var(--white) transparent;
+    border-style: solid;
+    position: absolute;
+    transform: rotate(-90deg);
+    top: -1.6rem;
+    right: 0;
+}
+
+.show {
+    display: none;
+}
+
+.mobile-nav li {
+    text-align: center;
+    padding: .5rem;
+}
+
+.mobile-nav li a {
+    color: var(--darkGrayBlue);
+    display: inline-block;
+    padding: .7rem;
+    opacity: 1;
+}
+
+.mobile-nav li:last-child a {
+    background-color: var(--yellow);
+    border: 2px solid var(--yellow);
+    color: var(--white);
+    margin-bottom: 5px;
+    border-radius: 2rem;
+}
+
+.mobile-nav li:last-child a:hover {
+    background-color: var(--white);
+    color: var(--yellow);
+}
+
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero h1 {
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-family: 'Fraunces';
+}
+
+.hero img {
+    cursor: pointer;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid .desc {
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+}
+
+.content h1 {
+    color: var(--darkBlue);
+}
+
+.content p {
+    color: var(--grayBlue);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.content button {
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: var(--darkBlue);
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.content .line1, .content .line2 {
+    width: 150px;
+    height: 5px;
+    border-radius: 1rem;
+}
+
+.line1 {
+    background-color: var(--yellow);
+}
+
+.line2 {
+    background-color: var(--softRed);
+}
+
+.image-desc {
+    position: relative;
+}
+
+.absolute1,.absolute2 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.absolute1 h1 {
+    color: var(--darkBlue);
+}
+
+.absolute1 p {
+    color: var(--darkBlue);
+}
+
+.absolute2 h1,p {
+    color: var(--Blue);
+}
+
+.testimonials {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.testimonials .container {
+    max-width: 909pt;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.testimonials h1 {
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+    color: var(--gray);
+    letter-spacing: 5px;
+}
+
+.testimonials .person img {
+    border-radius: 50%;
+}
+
+.person p {
+    color: var(--darkGrayBlue);
+    padding: 1rem;
+}
+
+h3 {
+    color: var(--darkBlue);
+}
+
+small {
+    color: var(--gray);
+    margin-bottom: 2rem;
+}
+
+.only-img {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.only-img img {
+    width: calc(100% / 4);
+}
+
+footer {
+    text-align: center;
+    color: var(--darkCyan);
+    background-color: var(--footer);
+    margin-top: -50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+footer .nav span {
+    display: inline-block;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+@media (min-width: 901px) {
+    .mobile-img {
+        display: none;
+    }
+    .desktop-img {
+        display: block;
+    }
+    .desktop-nav-links ul li:last-child {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .mobile-img {
+        display: block;
+        width: 100%;
+    }
+    .desktop-img {
+        display: none;
+    }
+    .desktop-nav-links ul li:not(:last-child) {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .grid .content {
+        text-align: center;
+    }
+    .line1,.line2 {
+        margin: 0 auto;
+    }
+    .only-img img {
+        width: calc(100% / 2);
+    }
+}
